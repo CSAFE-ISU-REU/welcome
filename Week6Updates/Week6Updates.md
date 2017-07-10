@@ -8,5 +8,28 @@ Steganography
 Shoeprints
 ----------
 
+Despite the short week, the shoeprint team made significant progress over the past three days. Continuing on from where we left off the previous week, we began creating histograms and plot to organize and visualize our data. Some of the packages we installed and worked with were: ggpairs, ggally, ggparcoord, ggplotyly, and kmeans. We accomplished this by guidance of our mentors Guillermo and Martín. Please see below for examples of these plots.
+
+These are the libraries we worked with.
+
+    library(purrr)
+    library(EBImage)
+    library(dplyr)
+    library(GGally)
+    library(plotly)
+    library(tidyr)
+
+The code shown below creates a plot that compares the Hu moments against one another. The more linear the scatterplots the closer the correlation of those Hu moments is to one. The colors of the points as well as the graphs represent different pairs of shoes.
+
+    ggpairs(shoeprints, columns = 4:11, ggplot2::aes(colour=id))
+
+The code below generates a plot that compares the Hu moment values for every pair of shoes. The code chunk "mapping = ggplot2::aes(size = 1)" makes the lines thicker and easier to see. The code chunks "ggplot2::aes(size = 1)) + ggplot2::scale\_size\_identity())" put all the values on a relative scale with one representing the the maximum value and zero representing the minimum value. The code chunk "%&gt;% ggplotly()" pipes the plot into the ggplotly function, which makes the plot interactive and allows for more information to be shown.
+
+    (ggparcoord(data = shoeprints, columns = c(3,4:11), groupColumn = 1,
+                    title ="Parallel Coord. Plot of Shoeprints Data", mapping = ggplot2::aes(size = 1)) +
+      ggplot2::scale_size_identity()) %>% ggplotly()
+
+Guillermo and Martín compiled an excel document comprised of Pokemon statistics. This allowed us to practice applying the code shown below. While this Pokemon data does not directly correlate with shoeprint analysis, the multiple variables present proved to be a great learning tool. The presence of both numeric and non-numeric variables paired with their range gave us new obstacles to overcome as we begin clustering.
+
 Cataloguing Casings
 -------------------
