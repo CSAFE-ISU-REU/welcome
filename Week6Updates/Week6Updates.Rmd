@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Steganography
 
 ## Shoeprints
-Despite the short week, the shoeprint team made significant progress over the past three days. Continuing on from where we left off the previous week, we began creating histograms and plot to organize and visualize our data. Some of the packages we installed and worked with were: ggpairs, ggally, ggparcoord, ggplotyly, and kmeans. We accomplished this by guidance of our mentors Guillermo and Martín.  Please see below for examples of these plots.
+Despite the short week, the shoeprint team made significant progress over the past three days. Continuing on from where we left off the previous week, we began creating histograms and plot to organize and visualize our data. Some of the packages we installed and worked with were: ggpairs, ggally, ggparcoord, ggplotyly, and kmeans. We accomplished this by guidance of our mentors Guillermo and Martín.  Please see the prezi (https://prezi.com/p/rijzzjfgybp_/) for examples of plots and further code.
 
 These are the libraries we worked with.
 ```

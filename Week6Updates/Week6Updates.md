@@ -8,7 +8,7 @@ Steganography
 Shoeprints
 ----------
 
-Despite the short week, the shoeprint team made significant progress over the past three days. Continuing on from where we left off the previous week, we began creating histograms and plot to organize and visualize our data. Some of the packages we installed and worked with were: ggpairs, ggally, ggparcoord, ggplotyly, and kmeans. We accomplished this by guidance of our mentors Guillermo and Martín. Please see below for examples of these plots.
+Despite the short week, the shoeprint team made significant progress over the past three days. Continuing on from where we left off the previous week, we began creating histograms and plot to organize and visualize our data. Some of the packages we installed and worked with were: ggpairs, ggally, ggparcoord, ggplotyly, and kmeans. We accomplished this by guidance of our mentors Guillermo and Martín. Please see the prezi (<https://prezi.com/p/rijzzjfgybp_/>) for examples of plots and further code.
 
 These are the libraries we worked with.
 
@@ -29,7 +29,7 @@ The code below generates a plot that compares the Hu moment values for every pai
                     title ="Parallel Coord. Plot of Shoeprints Data", mapping = ggplot2::aes(size = 1)) +
       ggplot2::scale_size_identity()) %>% ggplotly()
 
-Guillermo and Martín compiled an excel document comprised of Pokemon statistics. This allowed us to practice applying the code shown below. While this Pokemon data does not directly correlate with shoeprint analysis, the multiple variables present proved to be a great learning tool. The presence of both numeric and non-numeric variables paired with their range gave us new obstacles to overcome as we begin clustering.
+Guillermo and Martín compiled an excel document comprised of Pokemon statistics. This allowed us to practice clustering data. While this Pokemon data does not directly correlate with shoeprint analysis, the multiple variables present proved to be a great learning tool. The presence of both numeric and non-numeric variables paired with their range gave us new obstacles to overcome as we begin clustering.
 
 Cataloguing Casings
 -------------------
