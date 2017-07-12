@@ -5,6 +5,14 @@ Week 6 Updates
 Steganography
 -------------
 
+This week, we learned how to perform the chi-square goodness-of-fit test and how the test can apply to steganalysis. The chi-square test is a statistical test applied to sets of categorical data to evaluate how likely it is that any observed difference between the sets arose by chance. The chi-square test is specifically for LSB replacement steganalysis because LSB replacement locks least significant bits into pairs. Chi-square only works with embedded images that are embedded lexicographically (meaning from left to right, top to bottom).
+
+![Chi-square test](Chi-square.png)
+
+This image describes our hypothesis and our test statistic. If the If p value is small, reject the null hypothesis. This implies that the image is possibly cover If the p value is large, fail to reject the null hypothesis. This implies that the image is possibly a stego.
+
+Next week, we are using MatLab to calculate the p-values of our images (both cover and stego) and graphing the results for a visual representation of embedding.
+
 Shoeprints
 ----------
 
