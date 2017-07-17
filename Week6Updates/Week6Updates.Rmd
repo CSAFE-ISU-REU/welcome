@@ -50,3 +50,4 @@ The code below generates a plot that compares the Hu moment values for every pai
 Guillermo and Martín compiled an excel document comprised of Pokemon statistics. This allowed us to practice clustering data. While this Pokemon data does not directly correlate with shoeprint analysis, the multiple variables present proved to be a great learning tool. The presence of both numeric and non-numeric variables paired with their range gave us new obstacles to overcome as we begin clustering.
 
 ## Cataloguing Casings 
+These past few weeks, I went through the large crates full of cartridge casings and cataloged them to see what we had and what we were missing. Then I created new codes for all of the casings we have, which will eventually be used for making subsamples for another round of analysis by examiners.

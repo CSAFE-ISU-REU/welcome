@@ -45,3 +45,5 @@ Guillermo and Martín compiled an excel document comprised of Pokemon statistics
 
 Cataloguing Casings
 -------------------
+
+These past few weeks, I went through the large crates full of cartridge casings and cataloged them to see what we had and what we were missing. Then I created new codes for all of the casings we have, which will eventually be used for making subsamples for another round of analysis by examiners.
