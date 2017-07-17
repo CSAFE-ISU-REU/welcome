@@ -12,4 +12,4 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Shoeprints
 
-## Cataloguing Casings 
+## Bullets and Casings
