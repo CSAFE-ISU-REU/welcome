@@ -145,6 +145,8 @@ ggplot() +
             size = 5, data = rig, hjust = -0.1) + 
   xlim(c(-91, -80)) + ylim(c(22,32))
 ```
+
+If you would like to see some of the charts that were made, read about our poster progress, or read about how shoe prints are taken in the feild, please see our weekly presentation. https://prezi.com/p/6qsvh22f51p7/
    
 
 Bullets and Casings
