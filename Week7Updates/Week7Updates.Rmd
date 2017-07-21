@@ -1,6 +1,6 @@
 ---
 title: "Week 7 Updates"
-date: "2017-07-014 12:30:00 CDT"
+date: "2017-07-14 12:30:00 CDT"
 output: github_document
 ---
 
