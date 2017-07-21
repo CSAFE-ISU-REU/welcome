@@ -1,18 +1,21 @@
-Week 7 Updates
-================
-2017-07-014 12:30:00 CDT
+---
+title: "Week 7 Updates"
+date: "2017-07-014 12:30:00 CDT"
+output: github_document
+---
 
-Steganography
--------------
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, eval = FALSE)
+```
 
-Shoeprints
-----------
+## Steganography
 
-During the past week, the shoe print group has been developing cluster plots, dendrograms, and other figures to better display our data. Using the skills learned last week (Pokémon data set), we were able to plot and begin interpreting a new data set given to us by our principal investigators. This new data set included ten sets of shoes (two replicates of each). Each shoe was scanned five times and these scans comprise our new data set.
+## Shoeprints
 
-This data was applied to the following r-code.
-
-``` r
+During the past week, the shoe print group has been developing cluster plots, dendrograms, and other figures to better display our data. Using the skills learned last week (Pokémon data set), we were able to plot and begin interpreting a new data set given to us by our principal investigators. This new data set included ten sets of shoes (two replicates of each). Each shoe was scanned five times and these scans comprise our new data set. 
+  
+This data was applied to the following r-code. 
+```{r}
 library(EBImage)
 library(solefinder)
 library(dplyr)
@@ -55,11 +58,11 @@ map_df (1, Hu)
 d <- map_df(1:100, Hu)
 ```
 
-This code breaks the data down and computes the eight Hu moments for each image. This process took roughly half an hour due to the size of the data set.
+This code breaks the data down and computes the eight Hu moments for each image. This process took roughly half an hour due to the size of the data set. 
 
-The new data file was then applied to the following r-code.
+The new data file was then applied to the following r-code. 
 
-``` r
+```{r}
 library(tidyr)
 
 shoeprints <- 
@@ -122,9 +125,9 @@ distances[1:5, 1:5]
 distances <- dist(X, method = "euclidean")
 ```
 
-This code both organized the data and created a dendrogram. Running further code allowed us to organize the data into a cluster plot. This plot grouped the Hu moments based on commonalities. Our goals for the coming week are to further organize the data and break it down by both individual and shoe type.
+This code both organized the data and created a dendrogram. Running further code allowed us to organize the data into a cluster plot. This plot grouped the Hu moments based on commonalities. Our goals for the coming week are to further organize the data and break it down by both individual and shoe type. 
 
-``` r
+```{r}
 single <- hclust(distances, method = "single")
 plot(single)
 
@@ -149,5 +152,4 @@ ggplot() +
   xlim(c(-91, -80)) + ylim(c(22,32))
 ```
 
-Bullets and Casings
--------------------
+## Bullets and Casings
