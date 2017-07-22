@@ -151,3 +151,5 @@ ggplot() +
 
 Bullets and Casings
 -------------------
+
+This week I was taught by Allison Mark how to use a confocal microscope for scanning bullets. It's a very repetitive process for each land, but definitely enjoyable. First, we make the land come into focus at 5x magnification. Next, we go to the 20x magnification and make each side of the land come into focus. Next, we go to the center and make it come into focus, then slightly above so it's out of focus again. Then we add 0.0065 to that and increase the z-axis to that amount and add 0.006 to that number and change the z-scale (don't know exactly what that is) to that number. Then we go to the left image and make the z-axis equal zero. Then we autolight it and add 20% of that brightness level. Then we hit aquire and get a scan of the land.
