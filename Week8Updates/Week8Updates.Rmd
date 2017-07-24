@@ -11,6 +11,60 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, eval = FALSE)
 ## Steganography
 
 ## Shoeprints
+   This past week was particularly eventful for the shoe print team. Due to the numerous things going on, our group had to split workloads and work as a team to be able to both stay on schedule and assist with the high school students that were coming though. 
+   Jimmy and Andrew assisted with the high school group that csafe was hosting. Things done included escape rooms, shoe printing, finger printing, and hand writing. The week was wrapped up with a panel of 5 college students were we answered questions about school and application. Our information was made available to them should they have any questions in the future. 
+   During this time, Sam and Marion continued to develop the model that was presented at the Friday Chat and Chew along with beginning to compile data for the presentation. This work was aided by Jimmy and Andrew when they were not with the students. Marion is also still collecting photos for Stacy to use in other aspects of csafe. 
+The following is the code that was developed:
 
+We used randomForest to create our model as well as some functions from tidyverse.
+```
+install.packages("randomForest")
+library(randomForest)
+library(tidyverse)
+```
+This code chunk separates Guillermo and Martín's shoes from the shoeprint dataframe.
+```
+Gshoes <- filter(shoeprints, id == "G")
+Gshoes
+
+Mshoes <- filter(shoeprints, id == "M")
+Mshoes
+```
+This code chunk takes a random sample of 60% of each person's shoes.
+```
+set.seed(123)
+names(Gshoes) <- gsub(pattern = " ", replacement = "", x = names(Gshoes))
+Gsamp <- sample(x = nrow(Gshoes), size = 0.6 * nrow(Gshoes))
+
+set.seed(123)
+names(Mshoes) <- gsub(pattern = " ", replacement = "", x = names(Mshoes))
+Msamp <- sample(x = nrow(Mshoes), size = 0.6 * nrow(Mshoes))
+```
+This code chunk designates which data will be used to train the model and which data will be used to test it. In this case 60% was used to train while the other 40% was used to test.
+
+```
+trainG <- Gshoes[Gsamp,]%>%mutate(id = as.factor(id))
+trainM <- Mshoes[Msamp,]%>%mutate(id = as.factor(id))
+traingGM <- bind_rows(testG, testM)
+
+testG <- Gshoes[-Gsamp,]%>%mutate(id = as.factor(id))
+testM <- Mshoes[-Msamp,]%>%mutate(id = as.factor(id))
+testGM <- bind_rows(trainG, trainM)
+```
+This next code chunk generates the model and tells it what to learn from. We only let the model make it's predictions based on the 8 Hu moments.
+```
+model <- randomForest(id ~. -type -side -rep, data = trainGM, ntree = 700)
+model
+```
+This code chunk generates the model's prediction from the test data and presents it in a table.
+```
+pred <- predict(model, newdata = testGM)
+table(pred, testGM$id)
+```
+This code chunk tests the accuracy of the model's prediction.
+```
+tab <- table(pred, testGM$id)
+sum(diag(tab))/sum(tab)
+```
 ## Bullets
 
