@@ -5,6 +5,12 @@ Week 7 Updates
 Steganography
 -------------
 
+This week we learned about receiver operating characteristic (ROC) curves and how to plot them using MATLAB. A ROC curve is a way to compare diagnostic tests as the discrimination threshold is varied. The ROC curve is created by plotting the true positive rate against the false positive rate. Each point on the curve represents a sensitivity/specificity pair. The closer the curve is to the upper left corner, the higher the overall accuracy of the test.
+
+We created four matrices. Matrix A contained all of the "pvals" from all of the cover and stego images. Each row of the matrix is all of the pvals from a single image. Matrix B is a matrix of 1s and 0s where a 1 is returned if the pval in matrix A is higher than the threshold. A 0 is returned if the pval is lower than the threshold. Matrix C is a matrix of the count of how many pvals in Matrix B are greater than the threshold in each image. Matrix D is a matrix of 1s and 0s where a 1 classifies the image as a stego and a 0 classifies the image as a cover. We created 50 rocTable matrices, where the first column is the threshold, the second column is the false positive rate, and the third and final column is the true positive rate. The 50 tables were used to create 50 ROC curves.
+
+![ROC curve 2](ROC%20curve%202.png)
+
 Shoeprints
 ----------
 
